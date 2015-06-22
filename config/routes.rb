@@ -1,8 +1,10 @@
 LighthouseForum::Application.routes.draw do
 
   get 'posts', to: 'posts#index'
-
+  get 'posts/new', to: 'posts#new'
   get 'posts/:id', to: 'posts#show'
+  post 'posts',    to: 'posts#create'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -44,7 +46,7 @@ LighthouseForum::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
